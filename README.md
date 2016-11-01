@@ -8,12 +8,12 @@
 
 ### messages
 |user_id|group_id|text|image|
-|:---:|:---:|:---:|
-|integer|integer|text|t|
+|:---:|:---:|:---:|:---:|
+|integer|integer|text|text|
 
 ### groups
 |group_name|
-|:---:|:---:|
+|:---:|
 |integer|
 
 ### group_users
