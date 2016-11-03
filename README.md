@@ -15,8 +15,9 @@
 |group_name|
 |:---:|
 |integer|
+* null: false
 
-### group_users
+### groups_users
 |user_id|group_id|
 |:---:|:---:|
 |integer|integer|
@@ -24,11 +25,11 @@
 ## asociation
 
 ### message
-* belongs_to :user
+* belongs_to :users
 * belongs_to :group
 
 ### group
-* has_many :user
+* has_many :users, through: :groups_users
 * has_many :messages
 * has_many :group_users
 
