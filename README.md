@@ -15,7 +15,6 @@
 |group_name|
 |:---:|
 |integer|
-* null: false
 
 ### groups_users
 |user_id|group_id|
