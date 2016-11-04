@@ -1,24 +1,37 @@
-# README
+# data base design
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## overview
+* users can message other users
+* users can create chat groups
 
-Things you may want to cover:
+## tables
 
-* Ruby version
+### messages
+|user_id|group_id|text|image|
+|:---:|:---:|:---:|:---:|
+|integer|integer|text|text|
 
-* System dependencies
+### groups
+|group_name|
+|:---:|
+|integer|
 
-* Configuration
+### groups_users
+|user_id|group_id|
+|:---:|:---:|
+|integer|integer|
 
-* Database creation
+## asociation
 
-* Database initialization
+### message
+* belongs_to :users
+* belongs_to :group
 
-* How to run the test suite
+### group
+* has_many :users, through: :groups_users
+* has_many :messages
+* has_many :group_users
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### group_user
+* belongs_to :user
+* belongs_to :group
