@@ -2,34 +2,38 @@
   .chat
     .chat-side
       .chat-user.clearfix
-        %h5 user
+        %h5
+          user
           .chat-user__actions
-            %a.chat-user__action (href="/chat_groups/new")
+            = link_to '/chat_groups/new', class: "chat-user__action" do
               %i.fa-pencil-square-o
-            %a.chat-user__action (href="/users/edit")
+            = link_to 'users/edit', class: "chat-user__action" do
               %i.fa.fa-cog
       %ul.chat-groups
         %li.chat-group
-          %a.chat-group__link (href="/chat_groups/1462/messages")
+          = link_to '/chat_groups/1462/messages', class: "chat-group__link" do
             %p.chat-group__name otameshi
             %p.chat-group__message message
     .chat-main
       .chat-header.clearfix
         .chat-header--left
           %h2 otameshi
-          %p.chat-header__users Members:
+          %p.chat-header__users
+            Members:
             %span.chat-header__user user1
             %span.chat-header__user user2
         .chat-header--right
-          %a.chat-header__edit-btn (href="/chat_groups/1462/edit") Edit
+          = link_to 'Edit', class: "chat-header__edit-btn"
       .chat-body
         %ul.chat-messages
           %li.chat-messages
             .chat-message__header.clearfix
+            %p.chat-message__nameuser1
+            %p.chat-message__time timestamps
             %p.chat-message__body message
       .chat-footer
-        .chat-footer__body
-          %textarea{ row: 1,placeholder: "type a message", name: "message[body]", id: "message_body" }
-          %label.chat-footer__file
-            %i.fa.fa-image
-          %input{ type: "submit", name: "commit" value: "Send", }
+        / .chat-footer__body
+        /   %textarea{ row: 1,placeholder: "type a message", name: "message[body]", id: "message_body" }
+        /   %label.chat-footer__file
+        /     %i.fa.fa-image
+        /   %input{ type: "submit", name: "commit" value: "Send", }
