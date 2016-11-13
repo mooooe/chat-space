@@ -1,3 +1,8 @@
 @import "./reset";
-@import "group";
 @import "font-awesome";
+@import "./modules/base.scss";
+@import "./modules/chat-body.scss";
+@import "./modules/chat-main.scss";
+@import "./modules/chat-side.scss";
+@import "./modules/footer.scss";
+@import "./modules/group";
