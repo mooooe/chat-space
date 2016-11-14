@@ -1,0 +1,46 @@
+.chat-main {
+  float: left;
+  position: relative;
+  width: calc(100% - 300px);
+  height: 100%;
+}
+
+.chat-header {
+  padding-right: 40px;
+  padding-left: 40px;
+  background-color: $White;
+  border-bottom: 1px solid $SmokeWhite;
+    &--left {
+      float: left;
+      margin-bottom: 12px;
+    }
+    h2 {
+      margin-top: 20px;
+      line-height: 50px;
+      letter-spacing: 2px;
+      color: $Black;
+      font-size: 20px;
+      font-weight: 400;
+    }
+    &__users {
+      line-height: 20px;
+      color: $DimGray;
+      font-size: 12px;
+    }
+    &__user {
+      margin-left: 3px;
+    }
+    &--right {
+      float: right;
+    }
+    &__edit-btn{
+      display: inline-block;
+      margin: 28px 0;
+      padding-right: 20px;
+      padding-left: 20px;
+      line-height: 40px;
+      color: $Blue;
+      font-size: 14px;
+      border: 2px solid;
+    }
+}

@@ -1,0 +1,39 @@
+.layout-notification
+  .chat
+    .chat-side
+      .chat-user.clearfix
+        %h5 user
+        .chat-user__actions
+          = link_to '/chat_groups/new', class: "chat-user__action" do
+            %i.fa.fa-pencil-square-o
+          = link_to 'users/edit', class: "chat-user__action" do
+            %i.fa.fa-cog
+      %ul.chat-groups
+        %li.chat-group
+          = link_to '/chat_groups/1462/messages', class: "chat-group__link" do
+            %p.chat-group__name otameshi
+            %p.chat-group__message message
+    .chat-main
+      .chat-header.clearfix
+        .chat-header--left
+          %h2 otameshi
+          %p.chat-header__users
+            Members:
+            %span.chat-header__user user1
+            %span.chat-header__user user2
+        .chat-header--right
+          = link_to 'Edit', root_path, class: "chat-header__edit-btn"
+      .chat-body
+        %ul.chat-messages
+          %li.chat-message
+            .chat-message__header.clearfix
+              %p.chat-message__name user1
+              %p.chat-message__time 2016/11/04 15:41:20
+            %p.chat-message__body message
+      .chat-footer
+        %form
+          .chat-footer__body
+            %textarea{ row: 1,placeholder: "type a message", name: "message[body]", id: "message_body" }
+            %label.chat-footer__file
+              %i.fa.fa-image
+          %input{ type: "submit", name: "commit", value: "Send" }

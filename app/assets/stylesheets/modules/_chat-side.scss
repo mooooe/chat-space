@@ -1,0 +1,39 @@
+.chat-side {
+  float: left;
+  width: 300px;
+  height: 100%;
+  background-color: $Darkblue;
+}
+
+.chat-user {
+  height: 100px;
+  padding: 20px;
+  color: $White;
+  background-color: $Navy;
+
+  h5 {
+    float: left;
+    line-height: 60px;
+    letter-spacing: 2px;
+    font-size: 16px;
+  }
+  &__actions {
+    float: right;
+  }
+
+  &__action {
+    display: inline-block;
+    margin: 15px 0 15px 3px;
+    line-height: 28px;
+    color: $White;
+    font-size: 20px;
+  }
+}
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
