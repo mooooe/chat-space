@@ -1,0 +1,35 @@
+.chat-group {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  list-style: none;
+}
+
+.chat-group {
+  &__link {
+    display: block;
+    padding: 20px 20px;
+    color: #fff;
+  }
+  &__name {
+    display: inline-block;
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+  &__message {
+    font-size: 11px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
